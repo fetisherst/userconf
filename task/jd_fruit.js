@@ -99,6 +99,7 @@ const name = '京东水果'
 //助力好友分享码(最多4个,否则后面的助力失败),原因:京东农场每人每天只有四次助力机会
 var shareCodes = [ // 这个列表填入你要助力的好友的shareCode
     '3e0c33f6b3624eac97d5611c32b23073',
+    '1e60e929ca904e51af0942565a4ec8db',
 ]
 var Task = step();
 Task.next();
