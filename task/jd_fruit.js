@@ -101,7 +101,6 @@ const name = '京东水果'
 var shareCodes = [ // 这个列表填入你要助力的好友的shareCode
     '3e0c33f6b3624eac97d5611c32b23073',
     '1e60e929ca904e51af0942565a4ec8db',
-    '191158796b114074bd9d92d797097e56',
     'c68af68e5d3e4708bb58233764b45c57',
 ]
 // 添加box功能
