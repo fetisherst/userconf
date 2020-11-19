@@ -1,0 +1,48 @@
+# 京东
+#浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
+1 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png,enabled=true
+# 京东农场 
+1 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js, tag=京东农场, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png, enabled=true
+# 京东萌宠
+4 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js, tag=京东萌宠, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png, enabled=true
+# 种豆得豆
+7 7-21/2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js, tag=种豆得豆, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png, enabled=true
+# 京东宠汪汪 
+12 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js, tag=宠汪汪, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdww.png, enabled=true
+# 宠汪汪喂食
+12 */2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js, tag=宠汪汪喂食, enabled=true
+# 宠汪汪积分兑换奖品
+1 0 0,8,12,16 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js, tag=宠汪汪积分兑换奖品, enabled=true
+# 宠汪汪偷好友积分与狗粮
+0 9,12,18,23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js, tag=宠汪汪偷好友积分与狗粮, enabled=true
+# 天天加速 
+10 */6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, tag=天天加速, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png, enabled=true
+# 摇钱树
+5 */12 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js, tag=摇钱树, enabled=true
+#京小超
+31 0,7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=京小超, enabled=true
+#京小超兑换奖品
+1 0 0,8,12,16 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=京小超兑换奖品, enabled=true
+#取关京东店铺商品
+55 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js, tag=取关京东店铺商品
+#进店领豆
+10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=进店领豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+#摇京豆
+5 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js, tag=摇京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+#京东星推官
+0 0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js, tag=京东星推官, enabled=true
+#京豆变动通知
+2 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+#天天提鹅
+0 12 */3 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js, tag=天天提鹅
+#金融养猪
+12 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js, tag=金融养猪
+#京东全民开红包
+1 1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js, tag=京东全民开红包
+#京东抽奖机
+11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+# 京喜
+# 使用京东签到Cooike获取方法请查看NobyDa大佬脚本说明
+1 0 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js, tag=京喜, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, enabled=true
+# 京东金融领白条券  9点执行（周五券要9点开始领）
+0 9 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jd/JD_BaiTiao.js, tag=京东白条, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jdczf.png, enabled=true

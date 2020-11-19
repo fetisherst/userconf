@@ -1,0 +1,86 @@
+种豆：
+http://api.turinglabs.net/api/v1/jd/bean/create/bknudbr7e4sqxjhejgk4v3y7aeedz4dleuyrzaa/
+http://api.turinglabs.net/api/v1/jd/bean/create/7oivz2mjbmnx4dru74uu3shw4uwvf22phwbncqq/
+http://api.turinglabs.net/api/v1/jd/bean/create/u6jkolv6tvqwybewvqr257f5lq/
+http://api.turinglabs.net/api/v1/jd/bean/create/olmijoxgmjutznhzmoc3v3awdvaylzkmr7lasni/
+http://api.turinglabs.net/api/v1/jd/bean/count/
+农场：
+http://api.turinglabs.net/api/v1/jd/farm/create/006e8eafe7cc467eb37958a9620cf935/
+http://api.turinglabs.net/api/v1/jd/farm/create/6163504de93a4a5b90dbfd2e91a16e07/
+http://api.turinglabs.net/api/v1/jd/farm/create/3e0c33f6b3624eac97d5611c32b23073/
+http://api.turinglabs.net/api/v1/jd/farm/create/808b0569753c4cb3b8176866806e975f/
+http://api.turinglabs.net/api/v1/jd/farm/count/
+萌宠：
+http://api.turinglabs.net/api/v1/jd/pet/create/MTE1NDAxNzcwMDAwMDAwMzU1NjI0MzE=/
+http://api.turinglabs.net/api/v1/jd/pet/create/MTE1NDAxNzgwMDAwMDAwMzU5OTY1MDE=/
+http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzMjAwMDAwMDAyNjE2MzQ5NQ==/
+http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzNTAwMDAwMDAwNDYyMzkyMw==/
+http://api.turinglabs.net/api/v1/jd/pet/count/
+http://api.turinglabs.net/api/v1/jd/cleantimeinfo/
+HSBay
+水果：006e8eafe7cc467eb37958a9620cf935
+萌宠:MTE1NDAxNzcwMDAwMDAwMzU1NjI0MzE=
+种豆：bknudbr7e4sqxjhejgk4v3y7aeedz4dleuyrzaa
+WJFHSW08
+水果：6163504de93a4a5b90dbfd2e91a16e07
+萌宠：MTE1NDAxNzgwMDAwMDAwMzU5OTY1MDE=
+种豆：7oivz2mjbmnx4dru74uu3shw4uwvf22phwbncqq
+Bergwind 
+种豆：u6jkolv6tvqwybewvqr257f5lq  
+水果：3e0c33f6b3624eac97d5611c32b23073 
+萌宠：MTAxODc2NTEzMjAwMDAwMDAyNjE2MzQ5NQ==
+风中的翠竹 
+种豆：olmijoxgmjutznhzmoc3v3awdvaylzkmr7lasni 
+水果：808b0569753c4cb3b8176866806e975f 
+萌宠：MTAxODc2NTEzNTAwMDAwMDAwNDYyMzkyMw==
+ 
+大漩涡：你冲，我掩护。 
+水果 
+22db5693056c447f96d7e0a3af16e54a 
+萌宠 
+MTAxODc2NTEzNTAwMDAwMDAyNzE2MTQzMw== 
+种豆 
+3ixm2ksr7gkti6gn366sxl3wka 
+ 
+叫唤的路灯：(Lammmm) 
+种豆得豆id 
+mlrdw3aw26j3xse5e6w3r7rn3rxvi3jdgdsmc5i 
+水果 
+1e60e929ca904e51af0942565a4ec8db 
+萌宠 
+MTAxODc2NTEzMzAwMDAwMDAyODUxOTY0Mw== 
+ 
+ 
+懒惰的泥巴：sakura zs 
+萌宠 
+MTAxODc2NTEzMjAwMDAwMDAyODI1MDI5Nw== 
+ 
+文姬, [jd-46309604] 
+农场 9a1ee9af3a4a403c84d3e8ff689d6928 
+萌宠 MTAxODc2NTEzNTAwMDAwMDAxOTg3NTU4NQ== 
+ 
+zh yuu：鱼鱼asd 
+水果f29cd879e2424ecf8d26b33752e8c59b 
+萌宠 
+MTAxODc2NTEzMjAwMDAwMDAyODkxNDA5NQ== 
+种豆 
+xzadqwnts3yngmysvlarrgecuq 
+ 
+Evopower 
+种豆得豆：hexohqmn2e3mdb6a7bymriz6prql7ss4sti5kpq 
+水果：c8710a7a6a114a3c8de1db1a076f53af 
+萌宠：MTAxODc2NTEzMzAwMDAwMDAzMjc4ODg0Mw== 
+ 
+ASan Mo 
+农场：df2700bf2367427b92f0819ff142ebb7 
+萌宠：MTAxODcxOTI2NTAwMDAwMDAyNjQ0NzYzNQ== 
+种豆得豆：kryhcevi2jws3rwtwbxjb5mola5ac3f4ijdgqji 
+ 
+ 
+前警员：Je NPCC 
+种豆得豆 
+6mkjxlpo5ttqti64jrf2pwyjdu 
+萌宠 
+MTAxODc2NTEzMzAwMDAwMDAyNTgwMDU0Nw== 
+水果 
+c68af68e5d3e4708bb58233764b45c57
