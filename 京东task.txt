@@ -1,48 +1,48 @@
-# ¾©¶«
-#ä¯ÀÀÆ÷µÇÂ¼ https://bean.m.jd.com µã»÷Ç©µ½²¢ÇÒ³öÏÖÇ©µ½ÈÕÀú
-1 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=¾©¶«, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png,enabled=true
-# ¾©¶«Å©³¡ 
-1 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js, tag=¾©¶«Å©³¡, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png, enabled=true
-# ¾©¶«ÃÈ³è
-4 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js, tag=¾©¶«ÃÈ³è, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png, enabled=true
-# ÖÖ¶¹µÃ¶¹
-7 7-21/2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js, tag=ÖÖ¶¹µÃ¶¹, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png, enabled=true
-# ¾©¶«³èÍôÍô 
-12 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js, tag=³èÍôÍô, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdww.png, enabled=true
-# ³èÍôÍôÎ¹Ê³
-12 */2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js, tag=³èÍôÍôÎ¹Ê³, enabled=true
-# ³èÍôÍô»ı·Ö¶Ò»»½±Æ·
-1 0 0,8,12,16 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js, tag=³èÍôÍô»ı·Ö¶Ò»»½±Æ·, enabled=true
-# ³èÍôÍôÍµºÃÓÑ»ı·ÖÓë¹·Á¸
-0 9,12,18,23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js, tag=³èÍôÍôÍµºÃÓÑ»ı·ÖÓë¹·Á¸, enabled=true
-# ÌìÌì¼ÓËÙ 
-10 */6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, tag=ÌìÌì¼ÓËÙ, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png, enabled=true
-# Ò¡Ç®Ê÷
-5 */12 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js, tag=Ò¡Ç®Ê÷, enabled=true
-#¾©Ğ¡³¬
-31 0,7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=¾©Ğ¡³¬, enabled=true
-#¾©Ğ¡³¬¶Ò»»½±Æ·
-1 0 0,8,12,16 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=¾©Ğ¡³¬¶Ò»»½±Æ·, enabled=true
-#È¡¹Ø¾©¶«µêÆÌÉÌÆ·
-55 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js, tag=È¡¹Ø¾©¶«µêÆÌÉÌÆ·
-#½øµêÁì¶¹
-10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=½øµêÁì¶¹, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
-#Ò¡¾©¶¹
-5 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js, tag=Ò¡¾©¶¹, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
-#¾©¶«ĞÇÍÆ¹Ù
-0 0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js, tag=¾©¶«ĞÇÍÆ¹Ù, enabled=true
-#¾©¶¹±ä¶¯Í¨Öª
-2 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=¾©¶¹±ä¶¯Í¨Öª, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
-#ÌìÌìÌá¶ì
-0 12 */3 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js, tag=ÌìÌìÌá¶ì
-#½ğÈÚÑøÖí
-12 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js, tag=½ğÈÚÑøÖí
-#¾©¶«È«Ãñ¿ªºì°ü
-1 1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js, tag=¾©¶«È«Ãñ¿ªºì°ü
-#¾©¶«³é½±»ú
-11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=¾©¶«³é½±»ú, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
-# ¾©Ï²
-# Ê¹ÓÃ¾©¶«Ç©µ½Cooike»ñÈ¡·½·¨Çë²é¿´NobyDa´óÀĞ½Å±¾ËµÃ÷
-1 0 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js, tag=¾©Ï², img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, enabled=true
-# ¾©¶«½ğÈÚÁì°×ÌõÈ¯  9µãÖ´ĞĞ£¨ÖÜÎåÈ¯Òª9µã¿ªÊ¼Áì£©
-0 9 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jd/JD_BaiTiao.js, tag=¾©¶«°×Ìõ, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jdczf.png, enabled=true
+# äº¬ä¸œ
+#æµè§ˆå™¨ç™»å½• https://bean.m.jd.com ç‚¹å‡»ç­¾åˆ°å¹¶ä¸”å‡ºç°ç­¾åˆ°æ—¥å†
+1 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=äº¬ä¸œ, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png,enabled=true
+# äº¬ä¸œå†œåœº 
+1 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js, tag=äº¬ä¸œå†œåœº, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png, enabled=true
+# äº¬ä¸œèŒå® 
+4 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js, tag=äº¬ä¸œèŒå® , img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png, enabled=true
+# ç§è±†å¾—è±†
+7 7-21/2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js, tag=ç§è±†å¾—è±†, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png, enabled=true
+# äº¬ä¸œå® æ±ªæ±ª 
+12 7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js, tag=å® æ±ªæ±ª, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdww.png, enabled=true
+# å® æ±ªæ±ªå–‚é£Ÿ
+12 */2 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js, tag=å® æ±ªæ±ªå–‚é£Ÿ, enabled=true
+# å® æ±ªæ±ªç§¯åˆ†å…‘æ¢å¥–å“
+1 0 0,8,12,16 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js, tag=å® æ±ªæ±ªç§¯åˆ†å…‘æ¢å¥–å“, enabled=true
+# å® æ±ªæ±ªå·å¥½å‹ç§¯åˆ†ä¸ç‹—ç²®
+0 9,12,18,23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js, tag=å® æ±ªæ±ªå·å¥½å‹ç§¯åˆ†ä¸ç‹—ç²®, enabled=true
+# å¤©å¤©åŠ é€Ÿ 
+10 */6 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js, tag=å¤©å¤©åŠ é€Ÿ, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png, enabled=true
+# æ‘‡é’±æ ‘
+5 */12 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js, tag=æ‘‡é’±æ ‘, enabled=true
+#äº¬å°è¶…
+31 0,7,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js, tag=äº¬å°è¶…, enabled=true
+#äº¬å°è¶…å…‘æ¢å¥–å“
+1 0 0,8,12,16 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js, tag=äº¬å°è¶…å…‘æ¢å¥–å“, enabled=true
+#å–å…³äº¬ä¸œåº—é“ºå•†å“
+55 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js, tag=å–å…³äº¬ä¸œåº—é“ºå•†å“
+#è¿›åº—é¢†è±†
+10 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js, tag=è¿›åº—é¢†è±†, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+#æ‘‡äº¬è±†
+5 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js, tag=æ‘‡äº¬è±†, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+#äº¬ä¸œæ˜Ÿæ¨å®˜
+0 0 0 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js, tag=äº¬ä¸œæ˜Ÿæ¨å®˜, enabled=true
+#äº¬è±†å˜åŠ¨é€šçŸ¥
+2 9 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=äº¬è±†å˜åŠ¨é€šçŸ¥, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_shop.png, enabled=true
+#å¤©å¤©æé¹…
+0 12 */3 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js, tag=å¤©å¤©æé¹…
+#é‡‘èå…»çŒª
+12 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js, tag=é‡‘èå…»çŒª
+#äº¬ä¸œå…¨æ°‘å¼€çº¢åŒ…
+1 1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js, tag=äº¬ä¸œå…¨æ°‘å¼€çº¢åŒ…
+#äº¬ä¸œæŠ½å¥–æœº
+11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=äº¬ä¸œæŠ½å¥–æœº, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+# äº¬å–œ
+# ä½¿ç”¨äº¬ä¸œç­¾åˆ°Cooikeè·å–æ–¹æ³•è¯·æŸ¥çœ‹NobyDaå¤§ä½¬è„šæœ¬è¯´æ˜
+1 0 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js, tag=äº¬å–œ, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jingxi.png, enabled=true
+# äº¬ä¸œé‡‘èé¢†ç™½æ¡åˆ¸  9ç‚¹æ‰§è¡Œï¼ˆå‘¨äº”åˆ¸è¦9ç‚¹å¼€å§‹é¢†ï¼‰
+0 9 * * * https://raw.githubusercontent.com/chavyleung/scripts/master/jd/JD_BaiTiao.js, tag=äº¬ä¸œç™½æ¡, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jdczf.png, enabled=true
