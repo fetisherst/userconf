@@ -2,6 +2,7 @@
   "name": "task gallery",
   "description": "grdy",
   "task": [
+    "0,1 19-21/1 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, tag=直播间红包雨, enabled=true",
     "1 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nh.js, tag=京东年货节, enabled=true",
     "10 6 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_home.js, tag=领京豆额外奖励, enabled=true",
     "2 9 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_change.js, tag=京豆变动通知, enabled=true",
