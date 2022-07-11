@@ -13,3 +13,4 @@ vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIiIsDQogICJhZGQiOiAid29kZS45MjI4MzMueHl6
 vless://c2a281b5-affd-4d02-9923-02e27abc7b76@wode.922833.xyz:443?encryption=none&security=tls&type=ws&host=wode.922833.xyz&path=%2Fvless
 vless://c2a281b5-affd-4d02-9923-02e27abc7b76@woca.922833.xyz:443?encryption=none&security=tls&type=ws&host=woca.922833.xyz&path=%2Fvless
 vless://c2a281b5-affd-4d02-9923-02e27abc7b76@woca.922833.xyz:443?encryption=none&security=tls&sni=woca.922833.xyz&type=ws&host=woca.922833.xyz&path=%2Fvless
+vmess://c26792ed-b921-46d2-d115-426d0fb9624b@13.125.199.46:55714/?type=tcp&encryption=auto#%F0%9F%87%B0%F0%9F%87%B7%20AWS%202
