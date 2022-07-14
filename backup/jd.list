@@ -9,3 +9,4 @@ vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIiIsDQogICJhZGQiOiAid29kZS45MjI4MzMueHl6
 vless://c2a281b5-affd-4d02-9923-02e27abc7b76@wode.922833.xyz:443?encryption=none&security=tls&type=ws&host=wode.922833.xyz&path=%2Fvless
 vless://c2a281b5-affd-4d02-9923-02e27abc7b76@woca.922833.xyz:443?encryption=none&security=tls&type=ws&host=woca.922833.xyz&path=%2Fvless
 vless://c2a281b5-affd-4d02-9923-02e27abc7b76@woca.922833.xyz:443?encryption=none&security=tls&sni=woca.922833.xyz&type=ws&host=woca.922833.xyz&path=%2Fvless
+trojan://c9a3a61d-5d49-4158-9e60-6fa32684b122@cm.spacez.cloud:30003/?allowInsecure=1#Relay_%f0%9f%87%a8%f0%9f%87%b3CN-%f0%9f%87%b9%f0%9f%87%bcTW_132
