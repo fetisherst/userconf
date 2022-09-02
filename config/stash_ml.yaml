@@ -1,5 +1,5 @@
 # 为了 Stash 里的流量卡片显示, 无其他作用
-# subscribe-url: "机场订阅地址"
+# subscribe-url: "https://sub.store/download/ml"
 
 mode: rule
 log-level: info
@@ -285,16 +285,16 @@ proxy-groups:
 
 proxy-providers:
   airport:
-    # 国外机场节点订阅
-    url: "https://sub.store/download/collection/gml"
+    # 国外机场节点订阅url: "https://sub.store/download/collection/gml"
+    url: "https://sub.store/download/ml"
     interval: 3600
     health-check:
       enable: true
       interval: 60
       url: http://cp.cloudflare.com/generate_204
   cnAirport:
-    # 国内机场节点订阅
-    url: "https://sub.store/download/collection/mianliu"
+    # 国内机场节点订阅url: "https://sub.store/download/collection/mianliu"
+    url: "https://sub.store/download/ml"
     interval: 3600
     health-check:
       enable: true
