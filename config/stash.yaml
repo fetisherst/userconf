@@ -9,14 +9,6 @@ external-controller: :9090
 # > 机场流量信息
 # subscribe-url: https://sub.store/download/collection/freely
 
-# > 面板信息
-tiles:
-  - name: ip
-    interval: 600
-    title: '获取IP'
-    content: 'IP地址'
-    icon: 'theatermasks.circle.fill' # 或 https://stash.ws/amazing.png
-    backgroundColor: '#663399'
 script-providers:
   ip:
     url: https://raw.githubusercontent.com/QGCliveDavis/ShadowRocket_Module/main/GETIP.js
