@@ -7,7 +7,7 @@ ipv6: true
 external-controller: :9090
 
 # > 机场流量信息
-subscribe-url: https://sub.store/download/collection/freely
+# subscribe-url: https://sub.store/download/collection/freely
 
 # > 面板信息
 tiles:
@@ -25,7 +25,7 @@ script-providers:
 proxy-providers:
   All:
     type: http
-    url: "https://sub.store/download/collection/Stash"
+    url: "https://sub.store/download/collection/freely"
     interval: 86400
     path: ./all.yaml
     health-check:
