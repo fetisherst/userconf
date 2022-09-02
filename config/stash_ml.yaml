@@ -97,12 +97,12 @@ proxies:
       User-Agent:
         "okhttp/3.11.0 Dalvik/2.1.0 (Linux; U; Android 11; Redmi K30 5G Build/RKQ1.200826.002)
         baiduboxapp/11.0.5.12 (Baidu; P1 11)"
-  # - name: "🆓 UC 免流"
-  #   type: http
-  #   server: 101.71.140.5
-  #   port: 8128
-  #   username: uc10.7.163.144
-  #   password: 1f47d3ef53b035443451c7ee7873ff38
+   - name: "🆓 UC 免流"
+     type: http
+     server: 101.71.140.5
+     port: 8128
+     username: uc10.7.163.144
+     password: 1f47d3ef53b035443451c7ee7873ff38
 
 proxy-groups:
   - name: "🇨🇳 墙内"
