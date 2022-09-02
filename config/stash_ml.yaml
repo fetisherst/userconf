@@ -1,309 +1,459 @@
+# 为了 Stash 里的流量卡片显示, 无其他作用
+# subscribe-url: "机场订阅地址"
+
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+
 dns:
   default-nameserver:
-  - system
+    # - 119.29.29.29
+    # - 223.5.5.5
+    - system
   nameserver:
-  - system
-external-controller: 0.0.0.0:9090
-log-level: info
-mode: rule
-proxies:
-- headers:
-    User-Agent: "okhttp/3.11.0 Dalvik/2.1.0 (Linux; U; Android 11; Redmi K30 5G Build/RKQ1.200826.002)
-      baiduboxapp/11.0.5.12 (Baidu; P1 11)"
-    X-T5-Auth: "1962898709"
-  name: "\U0001F193 百度免流"
-  port: 443
-  server: 157.0.148.53
-  type: http
-proxy-groups:
-- name: "\U0001F1E8\U0001F1F3 墙内"
-  proxies:
-  - "DIRECT"
-  - "\U0001F193\U0001F1E8\U0001F1F3 墙内免流"
-  ssid-policy:
-    cellular: "\U0001F193\U0001F1E8\U0001F1F3 墙内免流"
-    default: "DIRECT"
-  type: select
-- name: "\U0001F193\U0001F1E8\U0001F1F3 墙内免流"
-  proxies:
-  - "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场"
-  - "\U0001F193\U0001F311✈️ 免流墙外机场"
-  - DIRECT
-  type: select
-- name: "\U0001F311 墙外"
-  proxies:
-  - "\U0001F680\U0001F311 墙外非免流"
-  - "\U0001F193\U0001F311 墙外免流"
-  ssid-policy:
-    cellular: "\U0001F193\U0001F311 墙外免流"
-    default: "\U0001F680\U0001F311 墙外非免流"
-  type: select
-- name: "\U0001F680\U0001F311 墙外非免流"
-  proxies:
-  - "\U0001F193\U0001F311✈️ 免流墙外机场"
-  - "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场"
-  type: select
-- name: "\U0001F193\U0001F311 墙外免流"
-  proxies:
-  - "\U0001F193\U0001F311✈️ 免流墙外机场"
-  - "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场"
-  type: select
-- name: "\U0001F1E8\U0001F1F3 墙内受限"
-  proxies:
-  - "\U0001F1E8\U0001F1F3 墙内"
-  - "\U0001F193\U0001F1E8\U0001F1F3 墙内受限免流"
-  ssid-policy:
-    cellular: "\U0001F193\U0001F1E8\U0001F1F3 墙内受限免流"
-    default: "\U0001F1E8\U0001F1F3 墙内"
-  type: select
-- name: "\U0001F193\U0001F1E8\U0001F1F3 墙内受限免流"
-  proxies:
-  - "\U0001F193 百度免流"
-  - "\U0001F193\U0001F1E8\U0001F1F3 墙内免流"
-  type: select
-- name: "\U0001F6D1 拦截"
-  proxies:
-  - "REJECT"
-  - "\U0001F311 墙外"
-  - "\U0001F1E8\U0001F1F3 墙内"
-  type: select
-- name: "\U0001F1E8\U0001F1F3 墙内 UDP"
-  proxies:
-  - "\U0001F1E8\U0001F1F3 墙内"
-  - "\U0001F193\U0001F1E8\U0001F1F3 墙内免流 UDP"
-  ssid-policy:
-    cellular: "\U0001F193\U0001F1E8\U0001F1F3 墙内免流 UDP"
-    default: "\U0001F1E8\U0001F1F3 墙内"
-  type: select
-- name: "\U0001F193\U0001F1E8\U0001F1F3 墙内免流 UDP"
-  proxies:
-  - "\U0001F193\U0001F1E8\U0001F1F3 墙内免流"
-  - "UDP \U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-手动选择"
-  - "UDP \U0001F193\U0001F311✈️ 免流墙外机场-手动选择"
-  type: select
-- name: "\U0001F311 墙外 UDP"
-  proxies:
-  - "\U0001F680\U0001F311 墙外非免流 UDP"
-  - "\U0001F193\U0001F311 墙外 UDP"
-  ssid-policy:
-    cellular: "\U0001F193\U0001F311 墙外 UDP"
-    default: "\U0001F680\U0001F311 墙外非免流 UDP"
-  type: select
-- name: "\U0001F680\U0001F311 墙外非免流 UDP"
-  proxies:
-  - "\U0001F193\U0001F311 墙外免流"
-  - "UDP \U0001F193\U0001F311✈️ 免流墙外机场-手动选择"
-  - "UDP \U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-手动选择"
-  type: select
-- name: "\U0001F193\U0001F311 墙外 UDP"
-  proxies:
-  - "\U0001F193\U0001F311 墙外免流"
-  - "UDP \U0001F193\U0001F311✈️ 免流墙外机场-手动选择"
-  - "UDP \U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-手动选择"
-  type: select
-- name: "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场"
-  proxies:
-  - "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-自动测速"
-  - "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-手动选择"
-  type: select
-- name: "UDP \U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-手动选择"
-  type: select
-  use:
-  - cnAirport
-- name: "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-手动选择"
-  type: select
-  use:
-  - cnAirport
-- interval: 60
-  lazy: true
-  name: "\U0001F193\U0001F1E8\U0001F1F3✈️ 免流墙内机场-自动测速"
-  tolerance: 50
-  type: url-test
-  url: http://cp.cloudflare.com/generate_204
-  use:
-  - cnAirport
-- name: "\U0001F193\U0001F311✈️ 免流墙外机场"
-  proxies:
-  - "\U0001F193\U0001F311✈️ 免流墙外机场-自动测速"
-  - "\U0001F193\U0001F311✈️ 免流墙外机场-手动选择"
-  type: select
-- name: "UDP \U0001F193\U0001F311✈️ 免流墙外机场-手动选择"
-  type: select
-  use:
-  - airport
-- name: "\U0001F193\U0001F311✈️ 免流墙外机场-手动选择"
-  type: select
-  use:
-  - airport
-- interval: 60
-  lazy: true
-  name: "\U0001F193\U0001F311✈️ 免流墙外机场-自动测速"
-  tolerance: 50
-  type: url-test
-  url: http://cp.cloudflare.com/generate_204
-  use:
-  - airport
-proxy-providers:
-  airport:
-    interval: 3600
-    url: https://sub.store/download/collection/gml
-  cnAirport:
-    interval: 3600
-    url: https://sub.store/download/collection/mianliu
-rule-providers:
-  Advertising:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Advertising.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml"
-  AdvertisingDomain:
-    behavior: domain-text
-    interval: 3600
-    path: ./ruleset/AdvertisingDomain.txt
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.txt"
-  Apple:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Apple.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
-  AppleProxy:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/AppleProxy.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml"
-  China:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/ChinaMax.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml"
-  ChinaMaxDomain:
-    behavior: domain-text
-    interval: 3600
-    path: ./ruleset/ChinaMaxDomain.txt
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.txt"
-  Global:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Global.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
-  GlobalDomain:
-    behavior: domain-text
-    interval: 3600
-    path: ./ruleset/GlobalDomain.txt
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.txt"
-  Lan:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Lan.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
-  Microsoft:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Microsoft.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
-  Tencent:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Tencent.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tencent/Tencent.yaml"
-  TestFlight:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/TestFlight.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml"
-  Unbreak:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/Unbreak.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml"
-  WeChat:
-    behavior: classical
-    interval: 3600
-    path: ./ruleset/WeChat.yaml
-    type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml"
-rules:
-- "SCRIPT,quic,\U0001F6D1 拦截"
-- "SCRIPT,limitedUnbreak,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpUnbreak,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "RULE-SET,Unbreak,\U0001F1E8\U0001F1F3 墙内"
-- "RULE-SET,Advertising,\U0001F6D1 拦截"
-- "RULE-SET,AdvertisingDomain,\U0001F6D1 拦截"
-- "SCRIPT,limitedTencent,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpTencent,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "RULE-SET,Tencent,\U0001F1E8\U0001F1F3 墙内"
-- "SCRIPT,limitedWeChat,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpWeChat,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "RULE-SET,WeChat,\U0001F1E8\U0001F1F3 墙内"
-- "SCRIPT,udpMicrosoft,\U0001F311 墙外 UDP"
-- "RULE-SET,Microsoft,\U0001F311 墙外"
-- "SCRIPT,udpAppleProxy,\U0001F311 墙外 UDP"
-- "RULE-SET,AppleProxy,\U0001F311 墙外"
-- "SCRIPT,udpTestFlight,\U0001F311 墙外 UDP"
-- "RULE-SET,TestFlight,\U0001F311 墙外"
-- "SCRIPT,udpGlobalDomain,\U0001F311 墙外 UDP"
-- "RULE-SET,GlobalDomain,\U0001F311 墙外"
-- "SCRIPT,udpGlobal,\U0001F311 墙外 UDP"
-- "RULE-SET,Global,\U0001F311 墙外"
-- "SCRIPT,limitedApple,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpApple,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "RULE-SET,Apple,\U0001F1E8\U0001F1F3 墙内"
-- "SCRIPT,limitedChinaMaxDomain,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpChinaMaxDomain,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "RULE-SET,ChinaMaxDomain,\U0001F1E8\U0001F1F3 墙内"
-- "SCRIPT,limitedChina,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpChina,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "RULE-SET,China,\U0001F1E8\U0001F1F3 墙内"
-- "SCRIPT,noResolveLimitedCN,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,noResolveUdpCN,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "GEOIP,CN,\U0001F1E8\U0001F1F3 墙内,no-resolve"
-- "RULE-SET,Lan,DIRECT"
-- "SCRIPT,limitedCN,\U0001F1E8\U0001F1F3 墙内受限"
-- "SCRIPT,udpCN,\U0001F1E8\U0001F1F3 墙内 UDP"
-- "GEOIP,CN,\U0001F1E8\U0001F1F3 墙内"
-- "SCRIPT,udpMatch,\U0001F311 墙外 UDP"
-- "MATCH,\U0001F311 墙外"
+    # - 119.29.29.29
+    # - 223.5.5.5
+    - system
 script:
   shortcuts:
-    limitedApple: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('Apple')
-    limitedCN: network == 'tcp' and (dst_port == 443 or dst_port == 80) and geoip(dst_ip
-      if dst_ip != '' else resolve_ip(host)) == 'CN'
-    limitedChina: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('China')
-    limitedChinaMaxDomain: network == 'tcp' and (dst_port == 443 or dst_port == 80)
-      and match_provider('ChinaMaxDomain')
-    limitedTencent: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('Tencent')
+    quic: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port == 9305)
+
     limitedUnbreak: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('Unbreak')
-    limitedWeChat: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('WeChat')
-    noResolveLimitedCN: network == 'tcp' and (dst_port == 443 or dst_port == 80) and
-      dst_ip != '' and geoip(dst_ip) == 'CN'
-    noResolveUdpCN: network == 'udp' and dst_ip != '' and geoip(dst_ip) == 'CN'
-    quic: network == 'udp' and (dst_port == 443 or dst_port == 4483 or dst_port ==
-      9305)
-    udpApple: network == 'udp' and match_provider('Apple')
-    udpAppleProxy: network == 'udp' and match_provider('AppleProxy')
-    udpCN: network == 'udp' and geoip(dst_ip if dst_ip != '' else resolve_ip(host))
-      == 'CN'
-    udpChina: network == 'udp' and match_provider('China')
-    udpChinaMaxDomain: network == 'udp' and match_provider('ChinaMaxDomain')
-    udpGlobal: network == 'udp' and match_provider('Global')
-    udpGlobalDomain: network == 'udp' and match_provider('GlobalDomain')
-    udpMatch: network == 'udp'
-    udpMicrosoft: network == 'udp' and match_provider('Microsoft')
-    udpTencent: network == 'udp' and match_provider('Tencent')
-    udpTestFlight: network == 'udp' and match_provider('TestFlight')
     udpUnbreak: network == 'udp' and match_provider('Unbreak')
+
+    udpMicrosoft: network == 'udp' and match_provider('Microsoft')
+    udpAppleProxy: network == 'udp' and match_provider('AppleProxy')
+    udpTestFlight: network == 'udp' and match_provider('TestFlight')
+    udpGlobalDomain: network == 'udp' and match_provider('GlobalDomain')
+    udpGlobal: network == 'udp' and match_provider('Global')
+
+    limitedApple: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('Apple')
+    udpApple: network == 'udp' and match_provider('Apple')
+
+    limitedChinaMaxDomain: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('ChinaMaxDomain')
+    udpChinaMaxDomain: network == 'udp' and match_provider('ChinaMaxDomain')
+    limitedChina: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('China')
+    udpChina: network == 'udp' and match_provider('China')
+
+    noResolveLimitedCN: network == 'tcp' and (dst_port == 443 or dst_port == 80) and dst_ip != '' and geoip(dst_ip) == 'CN'
+    noResolveUdpCN: network == 'udp' and dst_ip != '' and geoip(dst_ip) == 'CN'
+
+    limitedCN: network == 'tcp' and (dst_port == 443 or dst_port == 80) and geoip(dst_ip if dst_ip != '' else resolve_ip(host)) == 'CN'
+    udpCN: network == 'udp' and geoip(dst_ip if dst_ip != '' else resolve_ip(host)) == 'CN'
+
+    udpTencent: network == 'udp' and match_provider('Tencent')
+    limitedTencent: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('Tencent')
+
     udpWeChat: network == 'udp' and match_provider('WeChat')
-subscribe-url: https://www.fkfirewall.top/api/v1/client/subscribe?token=ced7acde54d1b5addd69ae9107ce5777
+    limitedWeChat: network == 'tcp' and (dst_port == 443 or dst_port == 80) and match_provider('WeChat')
+
+    udpMatch: network == 'udp'
+proxies:
+  # - name: "自建免流 UDP 代理 - WS"
+  #   type: vmess
+  #   server: abc.com
+  #   port: 443
+  #   uuid: 7faee31e-0253-4abf-a529-7f1948a6f054
+  #   alterId: 4
+  #   cipher: auto
+  #   tls: true
+  #   udp: true
+  #   servername: abc.com
+  #   tls-hostname: abc.com
+  #   sni: abc.com
+  #   skip-cert-verify: true
+  #   network: ws
+  #   ws-opts:
+  #     path: /neuromancer
+  #     headers:
+  #       Host: abc.com
+  # - name: "自建免流 UDP 代理 - HTTP"
+  #   type: "vmess"
+  #   server: "abc.com"
+  #   port: "80"
+  #   uuid: "f18f5469-28b2-4f30-8589-21a5ed6848c1"
+  #   alterId: 0
+  #   tls: false
+  #   tfo: true
+  #   udp: true
+  #   cipher: auto
+  #   skip-cert-verify: true
+  #   vmess-aead: true
+  #   network: "http"
+  #   http-opts:
+  #     path:
+  #       - "/"
+  #     headers:
+  #       method:
+  #         - "GET"
+  #       Host:
+  #         - abc.com
+  - name: "🆓 百度免流"
+    type: http
+    server: 157.0.148.53
+    port: 443
+    headers:
+      X-T5-Auth: "1962898709"
+      User-Agent:
+        "okhttp/3.11.0 Dalvik/2.1.0 (Linux; U; Android 11; Redmi K30 5G Build/RKQ1.200826.002)
+        baiduboxapp/11.0.5.12 (Baidu; P1 11)"
+  # - name: "🆓 UC 免流"
+  #   type: http
+  #   server: 101.71.140.5
+  #   port: 8128
+  #   username: uc10.7.163.144
+  #   password: 1f47d3ef53b035443451c7ee7873ff38
+
+proxy-groups:
+  - name: "🇨🇳 墙内"
+    type: select
+    proxies:
+      - "DIRECT"
+      - "🆓🇨🇳 墙内免流"
+    ssid-policy:
+      cellular: "🆓🇨🇳 墙内免流"
+      default: "DIRECT"
+  - name: "🆓🇨🇳 墙内免流"
+    type: select
+    proxies:
+      - "🆓🇨🇳✈️ 免流墙内机场"
+      - "🆓🌑✈️ 免流墙外机场"
+      - DIRECT
+  - name: "🌑 墙外"
+    type: select
+    proxies:
+      - "🚀🌑 墙外非免流"
+      - "🆓🌑 墙外免流"
+    ssid-policy:
+      cellular: "🆓🌑 墙外免流"
+      default: "🚀🌑 墙外非免流"
+  - name: "🚀🌑 墙外非免流"
+    type: select
+    proxies:
+      - "🆓🌑✈️ 免流墙外机场"
+      - "🆓🇨🇳✈️ 免流墙内机场"
+  - name: "🆓🌑 墙外免流"
+    type: select
+    proxies:
+      - "🆓🌑✈️ 免流墙外机场"
+      - "🆓🇨🇳✈️ 免流墙内机场"
+  - name: "🇨🇳 墙内受限"
+    type: select
+    proxies:
+      - "🇨🇳 墙内"
+      - "🆓🇨🇳 墙内受限免流"
+    ssid-policy:
+      cellular: "🆓🇨🇳 墙内受限免流"
+      default: "🇨🇳 墙内"
+  - name: "🆓🇨🇳 墙内受限免流"
+    type: select
+    proxies:
+      - "🆓 百度免流"
+      # - "🆓 UC 免流"
+      - "🆓🇨🇳 墙内免流"
+  - name: "🛑 拦截"
+    type: select
+    proxies:
+      - "REJECT"
+      - "🌑 墙外"
+      - "🇨🇳 墙内"
+  - name: "🇨🇳 墙内 UDP"
+    type: select
+    proxies:
+      - "🇨🇳 墙内"
+      - "🆓🇨🇳 墙内免流 UDP"
+    ssid-policy:
+      cellular: "🆓🇨🇳 墙内免流 UDP"
+      default: "🇨🇳 墙内"
+  - name: "🆓🇨🇳 墙内免流 UDP"
+    type: select
+    proxies:
+      - "🆓🇨🇳 墙内免流"
+      - "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
+      - "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
+      # - "自建免流 UDP 代理 - HTTP"
+      # - "自建免流 UDP 代理 - WS"
+  - name: "🌑 墙外 UDP"
+    type: select
+    proxies:
+      - 🚀🌑 墙外非免流 UDP
+      - "🆓🌑 墙外 UDP"
+    ssid-policy:
+      cellular: "🆓🌑 墙外 UDP"
+      default: 🚀🌑 墙外非免流 UDP
+  - name: "🚀🌑 墙外非免流 UDP"
+    type: select
+    proxies:
+      - "🆓🌑 墙外免流"
+      - "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
+      - "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
+      # - "自建免流 UDP 代理 - HTTP"
+      # - "自建免流 UDP 代理 - WS"
+  - name: "🆓🌑 墙外 UDP"
+    type: select
+    proxies:
+      - "🆓🌑 墙外免流"
+      - "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
+      - "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
+      # - "自建免流 UDP 代理 - HTTP"
+      # - "自建免流 UDP 代理 - WS"
+  - name: "🆓🇨🇳✈️ 免流墙内机场"
+    type: select
+    proxies:
+      - "🆓🇨🇳✈️ 免流墙内机场-故障转移"
+      - "🆓🇨🇳✈️ 免流墙内机场-自动测速"
+      - "🆓🇨🇳✈️ 免流墙内机场-负载均衡"
+      - "🆓🇨🇳✈️ 免流墙内机场-手动选择"
+  - name: "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
+    type: select
+    use:
+      - cnAirport
+  - name: "🆓🇨🇳✈️ 免流墙内机场-手动选择"
+    type: select
+    use:
+      - cnAirport
+
+  - name: "🆓🇨🇳✈️ 免流墙内机场-负载均衡"
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://cp.cloudflare.com/generate_204
+    tolerance: 50
+    lazy: true
+    interval: 60
+    use:
+      - cnAirport
+  - name: "🆓🇨🇳✈️ 免流墙内机场-故障转移"
+    type: fallback
+    url: http://cp.cloudflare.com/generate_204
+    tolerance: 50
+    lazy: true
+    interval: 60
+    use:
+      - cnAirport
+
+  - name: "🆓🇨🇳✈️ 免流墙内机场-自动测速"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    tolerance: 50
+    lazy: true
+    interval: 60
+    use:
+      - cnAirport
+
+  - name: "🆓🌑✈️ 免流墙外机场"
+    type: select
+    proxies:
+      - "🆓🌑✈️ 免流墙外机场-故障转移"
+      - "🆓🌑✈️ 免流墙外机场-自动测速"
+      - "🆓🌑✈️ 免流墙外机场-负载均衡"
+      - "🆓🌑✈️ 免流墙外机场-手动选择"
+  - name: "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
+    type: select
+    use:
+      - airport
+  - name: "🆓🌑✈️ 免流墙外机场-手动选择"
+    type: select
+    use:
+      - airport
+
+  - name: "🆓🌑✈️ 免流墙外机场-故障转移"
+    type: fallback
+    url: http://cp.cloudflare.com/generate_204
+    tolerance: 50
+    lazy: true
+    interval: 60
+    use:
+      - airport
+  - name: "🆓🌑✈️ 免流墙外机场-负载均衡"
+    type: load-balance
+    strategy: consistent-hashing
+    url: http://cp.cloudflare.com/generate_204
+    tolerance: 50
+    lazy: true
+    interval: 60
+    use:
+      - airport
+
+  - name: "🆓🌑✈️ 免流墙外机场-自动测速"
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    tolerance: 50
+    lazy: true
+    interval: 60
+    use:
+      - airport
+
+proxy-providers:
+  airport:
+    # 国外机场节点订阅
+    url: "https://sub.store/download/collection/gml"
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 60
+      url: http://cp.cloudflare.com/generate_204
+  cnAirport:
+    # 国内机场节点订阅
+    url: "https://sub.store/download/collection/mianliu"
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 60
+      url: http://cp.cloudflare.com/generate_204
+rule-providers:
+  Tencent:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Tencent/Tencent.yaml"
+    path: ./ruleset/Tencent.yaml
+    interval: 3600
+  WeChat:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml"
+    path: ./ruleset/WeChat.yaml
+    interval: 3600
+  Unbreak:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml"
+    path: ./ruleset/Unbreak.yaml
+    interval: 3600
+  Advertising:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml"
+    path: ./ruleset/Advertising.yaml
+    interval: 3600
+  AdvertisingDomain:
+    type: http
+    behavior: domain-text
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Domain.txt"
+    path: ./ruleset/AdvertisingDomain.txt
+    interval: 3600
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
+    path: ./ruleset/Microsoft.yaml
+    interval: 3600
+  AppleProxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml"
+    path: ./ruleset/AppleProxy.yaml
+    interval: 3600
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    path: ./ruleset/Apple.yaml
+    interval: 3600
+  TestFlight:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml"
+    path: ./ruleset/TestFlight.yaml
+    interval: 3600
+  China:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml"
+    path: ./ruleset/ChinaMax.yaml
+    interval: 3600
+  ChinaMaxDomain:
+    type: http
+    behavior: domain-text
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.txt"
+    path: ./ruleset/ChinaMaxDomain.txt
+    interval: 3600
+  # ChinaMaxIP:
+  #   type: http
+  #   behavior: ipcidr-text
+  #   url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_IP.txt"
+  #   path: ./ruleset/ChinaMaxIP.txt
+  #   interval: 3600
+  Global:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
+    path: ./ruleset/Global.yaml
+    interval: 3600
+  GlobalDomain:
+    type: http
+    behavior: domain-text
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.txt"
+    path: ./ruleset/GlobalDomain.txt
+    interval: 3600
+  Lan:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    path: ./ruleset/Lan.yaml
+    interval: 3600
+rules:
+  # > 拦截 quic
+  - "SCRIPT,quic,🛑 拦截"
+
+  # > 优先直连(防误拦截) 以此为例 优先判断是否走受限代理, 其次判断UDP
+  - "SCRIPT,limitedUnbreak,🇨🇳 墙内受限"
+  - "SCRIPT,udpUnbreak,🇨🇳 墙内 UDP"
+  - "RULE-SET,Unbreak,🇨🇳 墙内"
+
+  # > 去广告
+  - "RULE-SET,Advertising,🛑 拦截"
+  # > 下面这个去广告可能误杀较多 看情况自己修改
+  - "RULE-SET,AdvertisingDomain,🛑 拦截"
+
+  # > 腾讯 直连
+  - "SCRIPT,limitedTencent,🇨🇳 墙内受限"
+  - "SCRIPT,udpTencent,🇨🇳 墙内 UDP"
+  - "RULE-SET,Tencent,🇨🇳 墙内"
+
+  # > 微信 直连
+  - "SCRIPT,limitedWeChat,🇨🇳 墙内受限"
+  - "SCRIPT,udpWeChat,🇨🇳 墙内 UDP"
+  - "RULE-SET,WeChat,🇨🇳 墙内"
+
+  # > 微软 代理(我直连下载慢 代理快 看情况自己修改)
+  - "SCRIPT,udpMicrosoft,🌑 墙外 UDP"
+  - "RULE-SET,Microsoft,🌑 墙外"
+
+  # > 苹果服务里需要代理的部分
+  - "SCRIPT,udpAppleProxy,🌑 墙外 UDP"
+  - "RULE-SET,AppleProxy,🌑 墙外"
+  - "SCRIPT,udpTestFlight,🌑 墙外 UDP"
+  - "RULE-SET,TestFlight,🌑 墙外"
+
+  # > 全球服务 代理
+  - "SCRIPT,udpGlobalDomain,🌑 墙外 UDP"
+  - "RULE-SET,GlobalDomain,🌑 墙外"
+  - "SCRIPT,udpGlobal,🌑 墙外 UDP"
+  - "RULE-SET,Global,🌑 墙外"
+
+  # > 苹果服务里需要直连的部分(根据情况 可以选择把这一段放在 全球服务 的上面)
+  - "SCRIPT,limitedApple,🇨🇳 墙内受限"
+  - "SCRIPT,udpApple,🇨🇳 墙内 UDP"
+  - "RULE-SET,Apple,🇨🇳 墙内"
+
+  # > 国内
+  - "SCRIPT,limitedChinaMaxDomain,🇨🇳 墙内受限"
+  - "SCRIPT,udpChinaMaxDomain,🇨🇳 墙内 UDP"
+  - "RULE-SET,ChinaMaxDomain,🇨🇳 墙内"
+  - "SCRIPT,limitedChina,🇨🇳 墙内受限"
+  - "SCRIPT,udpChina,🇨🇳 墙内 UDP"
+  - "RULE-SET,China,🇨🇳 墙内"
+  - "SCRIPT,noResolveLimitedCN,🇨🇳 墙内受限"
+  - "SCRIPT,noResolveUdpCN,🇨🇳 墙内 UDP"
+  - "GEOIP,CN,🇨🇳 墙内,no-resolve"
+  # > 局域网等
+  - "RULE-SET,Lan,DIRECT"
+
+  # > 国内 IP
+  - "SCRIPT,limitedCN,🇨🇳 墙内受限"
+  - "SCRIPT,udpCN,🇨🇳 墙内 UDP"
+  - "GEOIP,CN,🇨🇳 墙内"
+
+  # > 兜底代理
+  - "SCRIPT,udpMatch,🌑 墙外 UDP"
+  - "MATCH,🌑 墙外"
