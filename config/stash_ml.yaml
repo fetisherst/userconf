@@ -49,45 +49,6 @@ script:
 
     udpMatch: network == 'udp'
 proxies:
-  # - name: "自建免流 UDP 代理 - WS"
-  #   type: vmess
-  #   server: abc.com
-  #   port: 443
-  #   uuid: 7faee31e-0253-4abf-a529-7f1948a6f054
-  #   alterId: 4
-  #   cipher: auto
-  #   tls: true
-  #   udp: true
-  #   servername: abc.com
-  #   tls-hostname: abc.com
-  #   sni: abc.com
-  #   skip-cert-verify: true
-  #   network: ws
-  #   ws-opts:
-  #     path: /neuromancer
-  #     headers:
-  #       Host: abc.com
-  # - name: "自建免流 UDP 代理 - HTTP"
-  #   type: "vmess"
-  #   server: "abc.com"
-  #   port: "80"
-  #   uuid: "f18f5469-28b2-4f30-8589-21a5ed6848c1"
-  #   alterId: 0
-  #   tls: false
-  #   tfo: true
-  #   udp: true
-  #   cipher: auto
-  #   skip-cert-verify: true
-  #   vmess-aead: true
-  #   network: "http"
-  #   http-opts:
-  #     path:
-  #       - "/"
-  #     headers:
-  #       method:
-  #         - "GET"
-  #       Host:
-  #         - abc.com
   - name: "🆓 百度免流"
     type: http
     server: 157.0.148.53
@@ -149,7 +110,7 @@ proxy-groups:
     type: select
     proxies:
       - "🆓 百度免流"
-      # - "🆓 UC 免流"
+      - "🆓 UC 免流"
       - "🆓🇨🇳 墙内免流"
   - name: "🛑 拦截"
     type: select
@@ -171,8 +132,6 @@ proxy-groups:
       - "🆓🇨🇳 墙内免流"
       - "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
       - "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
-      # - "自建免流 UDP 代理 - HTTP"
-      # - "自建免流 UDP 代理 - WS"
   - name: "🌑 墙外 UDP"
     type: select
     proxies:
@@ -187,16 +146,12 @@ proxy-groups:
       - "🆓🌑 墙外免流"
       - "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
       - "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
-      # - "自建免流 UDP 代理 - HTTP"
-      # - "自建免流 UDP 代理 - WS"
   - name: "🆓🌑 墙外 UDP"
     type: select
     proxies:
       - "🆓🌑 墙外免流"
       - "UDP 🆓🌑✈️ 免流墙外机场-手动选择"
       - "UDP 🆓🇨🇳✈️ 免流墙内机场-手动选择"
-      # - "自建免流 UDP 代理 - HTTP"
-      # - "自建免流 UDP 代理 - WS"
   - name: "🆓🇨🇳✈️ 免流墙内机场"
     type: select
     proxies:
