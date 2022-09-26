@@ -7,3 +7,6 @@ DOMAIN-SUFFIX, pub2.emby.wtf
 DOMAIN-SUFFIX, cf.jmsooo.com
 DOMAIN-SUFFIX, blueseamusics.com
 DOMAIN-SUFFIX, emby-pub1.blueseacdn.com
+
+# 其他
+DOMAIN-KEYWORD,ssrsub
