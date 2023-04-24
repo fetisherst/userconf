@@ -2,9 +2,9 @@
 DOMAIN-SUFFIX,vercel.app
 # EMBY
 DOMAIN,play.charontv.com
-DOMAIN, pub2.emby.wtf
-DOMAIN, cf.jmsooo.com
-DOMAIN-SUFFIX, blueseamusics.com
+DOMAIN,pub2.emby.wtf
+DOMAIN,cf.jmsooo.com
+DOMAIN-SUFFIX,blueseamusics.com
 
 # 其他
 DOMAIN-KEYWORD,ssrsub
