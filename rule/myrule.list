@@ -1,9 +1,9 @@
 # substore
 DOMAIN-SUFFIX,vercel.app
 # EMBY
-DOMAIN-SUFFIX, play.charontv.com
-DOMAIN-SUFFIX, pub2.emby.wtf
-DOMAIN-SUFFIX, cf.jmsooo.com
+DOMAIN,play.charontv.com
+DOMAIN, pub2.emby.wtf
+DOMAIN, cf.jmsooo.com
 DOMAIN-SUFFIX, blueseamusics.com
 
 # 其他
