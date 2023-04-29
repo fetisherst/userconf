@@ -1,3 +1,6 @@
+#!name=解锁APP100+Pro-Eric
+#!desc=Mr.Eric转载注明出处
+#!https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Module/revenucar.sgmodule
 [MITM]
 hostname = %APPEND% api.revenuecat.com,buy.itunes.apple.com,asia.gikken.co,accounts.agenda.com,api.apphud.com,www.skyjos.cn,iap.etm.tech,api-weather.andy.works,*.163.com,api.faceapp.io,format-api.netpock.com,app.xunjiepdf.com,*.flownow.cn,api2.tophub.app,*.acrobat.com,cocorus-api.excite.co.jp,rdp.duetdisplay.com,ars.alar.my,api.getmimo.com,medi.dxzzy321.top,*.endel.io,ch.sleepcycle.com,callrecorder.icamscanner.com,ssl-api.itranslateapp.com,mobile-api.adguard.com,*.googleapis.com,notability.com,mobile.flightradar24.com, *.meiyan.com,*.meitu.com,accounts.agenda.com,dayone.app,backend.getdrafts.com,api.effie.pro,api.effie.co,ssl-api.itranslateapp.com,pushserv.airapps.co,qianji.xxoojoke.com,restore-access.indream.app
 [Script]
