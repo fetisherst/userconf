@@ -11,8 +11,21 @@ DOMAIN,cf.jmsooo.com
 DOMAIN,misty.ltd
 # > 剧狗
 DOMAIN,ju.dog
+IP-CIDR,202.61.255.248/32,no-resolve
 # > Singularity
 DOMAIN-SUFFIX,singularity.deja-vu.beauty
-
+# > 威威
+DOMAIN,gy.embyvip.org
+# > paul
+DOMAIN,emby.imetyou.top
+DOMAIN,cf.imetyou.top
+DOMAIN,fk.imetyou.top
+DOMAIN-SUFFIX,imetyou.top
+# > 星光
+DOMAIN,free.emby.eu.org
+# > TreeDiagram
+DOMAIN-SUFFIX,123456.al
+#> 1111
+DOMAIN-SUFFIX,emby.ml
 # 其他
 DOMAIN-KEYWORD,ssrsub
