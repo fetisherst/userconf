@@ -1,11 +1,18 @@
 # substore
 DOMAIN-SUFFIX,vercel.app
-# EMBY
+# >>>>>>>>>>EMBY
+# > 卡戎
 DOMAIN,play.charontv.com
+# > 终点站
 DOMAIN,pub2.emby.wtf
+# > 卷毛鼠
 DOMAIN,cf.jmsooo.com
+# > misty
 DOMAIN,misty.ltd
+# > 剧狗
 DOMAIN,ju.dog
+# > Singularity
 DOMAIN-SUFFIX,singularity.deja-vu.beauty
+
 # 其他
 DOMAIN-KEYWORD,ssrsub
