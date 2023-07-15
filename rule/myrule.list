@@ -29,6 +29,8 @@ DOMAIN-SUFFIX,123456.al
 DOMAIN-SUFFIX,emby.ml
 # > Marmot_Emby
 DOMAIN,v.20120714.xyz
+# > 佛系
+DOMAIN,1.4545.cf
 
 # 其他
 DOMAIN-KEYWORD,ssrsub
