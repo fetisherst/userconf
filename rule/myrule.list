@@ -36,6 +36,8 @@ DOMAIN,1.4545.cf
 DOMAIN,cfemby.wiri.tk
 #> 纸片人
 DOMAIN-SUFFIX,embyplus.org
+#> 二次元
+DOMAIN-KEYWORD,nijigem
 
 # 其他
 DOMAIN-KEYWORD,ssrsub
