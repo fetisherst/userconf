@@ -27,5 +27,8 @@ DOMAIN,free.emby.eu.org
 DOMAIN-SUFFIX,123456.al
 #> 1111
 DOMAIN-SUFFIX,emby.ml
+# > Marmot_Emby
+DOMAIN,v.20120714.xyz
+
 # 其他
 DOMAIN-KEYWORD,ssrsub
