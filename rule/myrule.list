@@ -4,7 +4,8 @@ DOMAIN-SUFFIX,vercel.app
 # > 卡戎
 DOMAIN,play.charontv.com
 # > 终点站
-DOMAIN,pub2.emby.wtf
+DOMAIN,pub3.emby.wtf
+DOMAIN,pub1.emby.wtf
 # > 卷毛鼠
 DOMAIN,cf.jmsooo.com
 # > misty
@@ -31,6 +32,8 @@ DOMAIN-SUFFIX,emby.ml
 DOMAIN,v.20120714.xyz
 # > 佛系
 DOMAIN,1.4545.cf
+# > CaptainZ
+DOMAIN,cfemby.wiri.tk
 
 # 其他
 DOMAIN-KEYWORD,ssrsub
