@@ -1,10 +1,9 @@
 #!name=获取Cookie
 #!desc=适用于Loon脚本获取Cookie
 #!author=fetisherst
-#!homepage=https://github.com/fetisherst/userconf/raw/main/Loon/GetCookie.plugin
+#!homepage=https://github.com/fetisherst/userconf/raw/master/plugin/GetCookie.plugin
 #!icon=https://github.com/Moli-X/Resources/raw/main/Icon/Image/Cookie.png
-#!edit=https://github.com/Moli-X/Resources/edit/main/Loon/GetCookie.plugin
-
+#!edit=https://github.com/fetisherst/userconf/edit/main/plugin/GetCookie.plugin
 
 [Script]
 
